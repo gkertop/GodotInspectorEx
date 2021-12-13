@@ -2,7 +2,7 @@
 
 ### 简介
 
-Godot检查器增强
+Godot检查器增强插件
 
 * Sprite支持size调整scale
 
