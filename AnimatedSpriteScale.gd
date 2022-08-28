@@ -1,4 +1,4 @@
-extends "Scale2Vector2Property.gd"
+extends "ScaleBase.gd"
 
 
 func get_texture(object):

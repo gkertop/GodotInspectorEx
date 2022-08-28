@@ -1,4 +1,4 @@
-extends Reference
+extends Object
 
 
 func stepify4(f):

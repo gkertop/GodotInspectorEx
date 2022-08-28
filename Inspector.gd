@@ -1,7 +1,7 @@
 extends EditorInspectorPlugin
 
-var SpriteScale2Vector2Property = preload("SpriteScale2Vector2Property.gd")
-var AnimatedSpriteScale2Vector2Property = preload("AnimatedSpriteScale2Vector2Property.gd")
+var SpriteScale = preload("SpriteScale.gd")
+var AnimatedSpriteScale = preload("AnimatedSpriteScale.gd")
 
 
 func can_handle(object):
@@ -12,9 +12,9 @@ func parse_property(object, type, path, hint, hint_text, usage):
 	match object.get_class():
 		"Sprite":
 			if type == TYPE_VECTOR2 && path == "scale":
-				add_property_editor_for_multiple_properties("Size", ["scale"], SpriteScale2Vector2Property.new())
+				add_property_editor_for_multiple_properties("Size", ["scale"], SpriteScale.new())
 		"AnimatedSprite":
 			if type == TYPE_VECTOR2 && path == "scale":
-				add_property_editor_for_multiple_properties("Size", ["scale"], AnimatedSpriteScale2Vector2Property.new())
+				add_property_editor_for_multiple_properties("Size", ["scale"], AnimatedSpriteScale.new())
 	return false
 
